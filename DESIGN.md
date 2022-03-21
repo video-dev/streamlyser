@@ -1,5 +1,6 @@
-```mermaid
+## Data Flow
 
+```mermaid
 sequenceDiagram
     %% Driver is either the CLI or server daemon of the tool responsible for calling the subsequent units
     participant driver
