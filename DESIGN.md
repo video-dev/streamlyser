@@ -18,9 +18,7 @@ sequenceDiagram
     %% Reporter is the underlying specific reporting toolset collector. Ex: OpenTelemetry, Prometheus, etc.
     participant reporter
     
-    rect rgb(191, 223, 255)
     note right of driver: Resolving a single URL to structured result
-    
     driver->>fetcher: provide URI
     fetcher->>metrics: provide request metrics
     fetcher->>parser: provides response and stream type
@@ -30,9 +28,6 @@ sequenceDiagram
     fetcher->>driver: provide structure
     driver->>driver: Process Document with configured rule-set
     driver->>metrics: provide requested metrics from rule-set
-    end
-
-    
     
     alt is push based
     loop Every configured period
